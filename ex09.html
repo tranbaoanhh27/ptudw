@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Nhóm 2</title>
+  <title>20120017</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +61,20 @@
     
   </header>
   <main>
+    <h1>Fetch API</h1>
+    <p id="text">Data of the web</p>
+    <button onclick="getApi()">Click</button>
 
+    <script>
+      const  url = 'file.txt';
+      async function getApi(){
+        const res = await fetch(url);
+
+        var data = await res.text();
+        console.log(data)
+        document.getElementById('text').innerHTML = data;
+      }
+    </script>
   </main>
   <footer>
     <!-- place footer here -->
