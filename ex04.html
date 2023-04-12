@@ -89,18 +89,18 @@
           <input type="password" 
               name="password" id="password" />
           <a href="#" onclick="handleClick(this)"><i class="bi bi-eye-slash" 
-              id="togglePassword"></i></a>
+              ></i></a>
       </p>
       <p>
         <label>Confirmr Password:</label>
           <input type="password" 
-              name="password" id="password1" />
-          <a href="#"><i class="bi bi-eye-slash" 
-              id="togglePassword"></i></a>
+              name="password" id="password_confirm" />
+          <a href="#" onclick="handleClick(this)"><i class="bi bi-eye-slash" 
+              ></i></a>
       </p>
 
-      <button type="submit" id="submit" 
-          class="btn btn-primary">
+      <button id="submit" 
+          class="btn btn-primary" onclick="handleConfirm()">
           Confirm
       </button>
       
@@ -108,8 +108,7 @@
   </div>
   <script>
     function handleClick(obj){
-      
-      let elm = obj.prevElementSibling;
+      let elm = obj.previousElementSibling;
       console.log(elm)
       if (elm.type == 'text'){
         elm.type = 'password'
@@ -117,6 +116,20 @@
         elm.type = 'text'
       }
     }
+
+    function handleConfirm(){
+      let pass = document.getElementById('password').value;
+      let confirm = document.getElementById('password_confirm').value;
+      console.log(pass)
+      console.log(confirm)
+      if (pass == confirm){
+        alert("The password connfirm is correct!")
+      }else{
+        alert("The password confirm is not correct!")
+      }
+    }
+
+
 
   </script>
   </main>
