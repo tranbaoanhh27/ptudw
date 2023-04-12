@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Nhóm 2</title>
+  <title>20120017</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +61,17 @@
     
   </header>
   <main>
-
+      <div>
+        <img src="./DOM-images/icon-1-active.png" alt="icon-1-active" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"><img>
+      </div>
+      <script>
+        function mouseOver(obj) {
+          obj.src="./DOM-images/icon-1.png";
+        }
+        function mouseOut(obj){
+          obj.src="./DOM-images/icon-1-active.png"
+        }
+      </script>
   </main>
   <footer>
     <!-- place footer here -->
