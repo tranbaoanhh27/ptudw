@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Nhóm 2</title>
+  <title>20120017</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +61,24 @@
     
   </header>
   <main>
-
+    <div class="container" id="container">
+    <div>
+    <button  ></button>
+    </div>
+    </div>
+    <button onclick="additem()">
+     Add item
+   </button>
+   <script>
+      function additem(){
+        let div = document.createElement('div');
+        let btn = document.createElement('button');
+      
+        div.appendChild(btn);
+        let container = document.getElementById('container');
+        container.appendChild(div);
+      } 
+   </script>
   </main>
   <footer>
     <!-- place footer here -->
